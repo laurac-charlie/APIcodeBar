@@ -1,0 +1,2 @@
+﻿07/10/2012 17:13:50 ==> MySql.Data.MySqlClient.MySqlException : Duplicate entry '11' for key 'PRIMARY'
+07/10/2012 17:15:19 ==> MySql.Data.MySqlClient.MySqlException : Duplicate entry '12' for key 'PRIMARY'

@@ -1,0 +1,5 @@
+C:\Users\Charlie\Documents\Visual Studio 2012\Projects\APIcodeBar\APIcodeBar\bin\Debug\APIcodeBar.exe
+C:\Users\Charlie\Documents\Visual Studio 2012\Projects\APIcodeBar\APIcodeBar\bin\Debug\APIcodeBar.pdb
+C:\Users\Charlie\Documents\Visual Studio 2012\Projects\APIcodeBar\APIcodeBar\obj\x86\Debug\APIcodeBar.csprojResolveAssemblyReference.cache
+C:\Users\Charlie\Documents\Visual Studio 2012\Projects\APIcodeBar\APIcodeBar\obj\x86\Debug\APIcodeBar.exe
+C:\Users\Charlie\Documents\Visual Studio 2012\Projects\APIcodeBar\APIcodeBar\obj\x86\Debug\APIcodeBar.pdb
