@@ -106,6 +106,8 @@ namespace APIcodeBar
                 Console.WriteLine("Envoi de mail");
             }
 
+            int nb_lignes_transfert = DAOFactory.getTransfertDAO().find(code_transfert, code_mag, DAOFactory.getReassortDAO().find(code_rea).codeMag_sortie).Count;
+            int nb_lignes_reassort = DAOFactory.getReassortDAO().find(code_rea).lignes.Count;
 
             int i = 0;
         }
