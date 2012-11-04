@@ -8,6 +8,10 @@ namespace APIcodeBar
 {
     class Program
     {
+        /// <summary>
+        /// Fonction de présentation de l'APIcodeBar
+        /// </summary>
+        /// <param name="args">arguments de la ligne de commande</param>
         static void Main(string[] args)
         {
             
