@@ -15,7 +15,7 @@ namespace APIcodeBar
         static void Main(string[] args)
         {
             
-            //Insertion des reassorts avec leurs lignes
+            /*Insertion des reassorts avec leurs lignes
             Reassort rea = new Reassort("G0");
             List<LigneReassort> lignes_rea = new List<LigneReassort>();
             LigneReassort lig = new LigneReassort();
@@ -34,6 +34,7 @@ namespace APIcodeBar
             }
             rea.lignes = lignes_rea;
             DAOFactory.getReassortDAO().create(rea);
+             * */
             
             //Variables
             string code_transfert = string.Empty;
@@ -47,15 +48,14 @@ namespace APIcodeBar
                 code_mag = ini.IniReadValue("REASSORT", "codeMag");
             else
                 throw new Exception("Le paramètre ini du code magasin n'a pas été initialisé.");
-
-            foreach (string s in code_mag.Split(';'))
-            {
-                //combo.add(s);
-            }
-
+            
             //L'utilisateur tape le code réassort et le code de transfert
             code_transfert = "144161";
             code_rea = "TESTREA1";
+
+            int nb_lignes_transfert = DAOFactory.getTransfertDAO().find(code_transfert, code_mag, DAOFactory.getReassortDAO().find(code_rea).codeMag_sortie).Count;
+            //nb_lignes_reassort = DAOFactory.getReassortDAO().find(code_rea).lignes.Count;
+            int nb_lignes_reassort = DAOFactory.getLigneReassortDAO().findAllLignes(DAOFactory.getReassortDAO().find(code_rea)).Count;
 
             //Vérifier que le code reassort et que le code de transfert existe
             bool rea_valid,transfert_valid = false;
@@ -106,8 +106,6 @@ namespace APIcodeBar
                 Console.WriteLine("Envoi de mail");
             }
 
-            int nb_lignes_transfert = DAOFactory.getTransfertDAO().find(code_transfert, code_mag, DAOFactory.getReassortDAO().find(code_rea).codeMag_sortie).Count;
-            int nb_lignes_reassort = DAOFactory.getReassortDAO().find(code_rea).lignes.Count;
 
             int i = 0;
         }

@@ -73,7 +73,7 @@ namespace APIcodeBar.DAO
         {
             try
             {
-                ICollection<LigneReassort> lignes_reassort = (from l in this._table_lignes_reassort /*where l.Id_reassort == 1*/ select l).ToList<LigneReassort>();
+                ICollection<LigneReassort> lignes_reassort = (from l in this._table_lignes_reassort where l.Id_reassort == reassort.id select l).ToList<LigneReassort>();
                 return lignes_reassort;
             }
             catch (Exception e)
