@@ -106,6 +106,8 @@ namespace APIcodeBar
                 Console.WriteLine("Envoi de mail");
             }
 
+            //On remet le contexte à null pour éviter les problèmes de mise à jour
+            DAOFactory.CONTEXT = null;
 
             int i = 0;
         }

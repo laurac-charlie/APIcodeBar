@@ -9,7 +9,7 @@ namespace APIcodeBar.DAO
 {
     public class DAOFactory
     {
-        protected static MySqlDataContext CONTEXT = null;
+        public static MySqlDataContext CONTEXT = null;
 
         private DAOFactory()
         {      }
