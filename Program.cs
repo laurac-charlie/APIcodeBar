@@ -83,12 +83,12 @@ namespace APIcodeBar
                                 break;
                             case "RESERVEG0": Console.WriteLine("il manque " + l.Entree_RESERVEG0 + " produits du modèle :" + l.Designation);
                                 break;
-                            /*case "ROBERT": result = result.Where(l => l.Entree_ROBERT > 0).ToList<LigneReassort>();
+                            case "ROBERT": Console.WriteLine("il manque " + l.Entree_ROBERT+ " produits du modèle :" + l.Designation);
                                 break;
-                            case "M0": result = result.Where(l => l.Entree_M0 > 0).ToList<LigneReassort>();
+                            case "M0": Console.WriteLine("il manque " + l.Entree_M0 + " produits du modèle :" + l.Designation);
                                 break;
-                            case "RESERVEM0": result = result.Where(l => l.Entree_RESERVEM0 > 0).ToList<LigneReassort>();
-                                break;*/
+                            case "RESERVEM0": Console.WriteLine("il manque " + l.Entree_RESERVEG0 + " produits du modèle :" + l.Designation);
+                                break;
                             default: throw new Exception("Le code magasin du fichier ini n'est pas référencé.");
                         }
                     }

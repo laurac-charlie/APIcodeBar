@@ -32,7 +32,10 @@ namespace APIcodeBar.DAO
                 reader = new MySqlCommand(command, this._connexion).ExecuteReader();
                 while (reader.Read())
                 {
-                    result.Add(reader.GetString("GenCod"), reader.GetInt16("Qte"));
+                    if (!result.ContainsKey(reader.GetString("GenCod")))
+                        result.Add(reader.GetString("GenCod"), reader.GetInt16("Qte"));
+                    else
+                        result[reader.GetString("GenCod")] = result[reader.GetString("GenCod")] + reader.GetInt16("Qte");
                 }
                 return result;
             }
