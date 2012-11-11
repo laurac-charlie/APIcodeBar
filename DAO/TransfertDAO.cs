@@ -32,6 +32,7 @@ namespace APIcodeBar.DAO
                 reader = new MySqlCommand(command, this._connexion).ExecuteReader();
                 while (reader.Read())
                 {
+                    //Correction du bug de doublons dans les gencodes du transfert
                     if (!result.ContainsKey(reader.GetString("GenCod")))
                         result.Add(reader.GetString("GenCod"), reader.GetInt16("Qte"));
                     else
