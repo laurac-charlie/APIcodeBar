@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using APIcodeBar.Entity;
 using APIcodeBar.DAO;
+using System.Threading;
 
 namespace APIcodeBar
 {
@@ -14,7 +15,6 @@ namespace APIcodeBar
         /// <param name="args">arguments de la ligne de commande</param>
         static void Main(string[] args)
         {
-            
             /*Insertion des reassorts avec leurs lignes
             Reassort rea = new Reassort("G0");
             List<LigneReassort> lignes_rea = new List<LigneReassort>();

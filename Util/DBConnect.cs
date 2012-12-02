@@ -170,6 +170,10 @@ namespace APIcodeBar
             return chaine;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private static string OdbcStringBuilder()
         {
             IniFile ini = new IniFile();

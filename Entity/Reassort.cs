@@ -69,7 +69,8 @@ namespace APIcodeBar.Entity
         /// <returns>le code aléatoirement généré du reassort</returns>
         public string genCodeReassort()
         {
-            Random d = new Random(99999);
+            //On enlève le seed pour avoir des chiffres différents
+            Random d = new Random();
             string code = this._id + this._codeMag_sortie + d.Next(1000, 9999);
             return code;
         }
