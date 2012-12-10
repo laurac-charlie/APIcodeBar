@@ -158,5 +158,33 @@ namespace APIcodeBar.DAO
 
             return valid;
         }
+
+        public string[] info_user(string code_transfert)
+        {
+            string[] info = new string[3];
+
+            string command = String.Format("select vendeur, date, heure from ventes where vente = '{0}'", code_transfert);
+            MySqlDataReader reader = null;
+            try
+            {
+                reader = new MySqlCommand(command, this._connexion).ExecuteReader();
+                while (reader.Read())
+                {
+                    info[0] = reader.GetString("vendeur");
+                    info[1] = reader.GetDateTime("date").ToShortDateString();
+                    info[2] = reader.GetTimeSpan("heure").ToString();
+                }
+                return info;
+            }
+            catch (Exception e)
+            {
+                SystemLog.ErrorLog(e.GetType().ToString(), e.Message);
+                return null;
+            }
+            finally
+            {
+                if (reader != null) reader.Close();
+            }
+        }
     }
 }

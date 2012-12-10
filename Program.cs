@@ -15,6 +15,9 @@ namespace APIcodeBar
         /// <param name="args">arguments de la ligne de commande</param>
         static void Main(string[] args)
         {
+            string[] info =  DAOFactory.getTransfertDAO().info_user("176054");
+            Console.WriteLine(info[0] + " a réalisé le reassort le " + info[1] + " à " + info[2]);
+            
             /*Insertion des reassorts avec leurs lignes
             Reassort rea = new Reassort("G0");
             List<LigneReassort> lignes_rea = new List<LigneReassort>();
