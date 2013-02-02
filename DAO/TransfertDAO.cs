@@ -159,6 +159,15 @@ namespace APIcodeBar.DAO
             return valid;
         }
 
+        /// <summary>
+        /// Retourne les informations du transfert à partir du code
+        /// </summary>
+        /// <param name="code_transfert">code du transfert</param>
+        /// <returns>renvoi un tableau de string 
+        /// 1 : nom du vendeur
+        /// 2 : date du transfert
+        /// 3 : heure du transfert
+        /// </returns>
         public string[] info_user(string code_transfert)
         {
             string[] info = new string[3];

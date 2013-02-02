@@ -72,6 +72,8 @@ namespace APIcodeBar.Entity
             //On enlève le seed pour avoir des chiffres différents
             Random d = new Random();
             string code = this._id + this._codeMag_sortie + d.Next(1000, 9999);
+            //On met à jour le code reassort de l'objet quand on le génère
+            this._code = code;
             return code;
         }
 
